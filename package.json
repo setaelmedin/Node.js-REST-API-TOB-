@@ -1,7 +1,7 @@
 {
   "name": "livestreaming",
   "version": "1.0.0",
-  "description": "",
+  "description": "REST API created for the purpose of technical interview",
   "main": "server.js",
   "scripts": {
     "start": "node server",
