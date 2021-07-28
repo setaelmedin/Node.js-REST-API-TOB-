@@ -1,5 +1,9 @@
 # Node.js-REST-API-TOB-
 
+# Link to deployed application on Heroku
+	https://tob-rest-api.herokuapp.com/
+	https://tob-rest-api.herokuapp.com/user/:id (eg. /user/1)
+
 # Install dependencies
 	npm install
 	yarn install
