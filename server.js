@@ -4,12 +4,14 @@ const http = require("http");
 const express = require("express");
 const cors = require("cors");
 const axios = require('axios').default;
-
 const app = express();
 
-const PORT = process.env.PORT;
-const HOST = process.env.HOST;
 const APPID = process.env.OPEN_WEATHER_APPID;
+const PORT = process.env.PORT;
+//If you want to dockerize this app, you need to change host variable from 127.0.0.1 to 0.0.0.0,
+//because Docker does not recognize 127.0.0.1
+const HOST = process.env.HOST;
+const HOSTFORDOCKER = process.env.HOSTFORDOCKER
 
 const server = http.createServer(app).listen(PORT, HOST, () => {
   const serverAdress = server.address();
@@ -17,6 +19,7 @@ const server = http.createServer(app).listen(PORT, HOST, () => {
     `listening on: http://${serverAdress.address}:${serverAdress.port} / ${serverAdress.family}`
   );
 });
+
 
 function terminate(server, options = { coredump: false, timeout: 500 }) {
   const exit = (code) => {
