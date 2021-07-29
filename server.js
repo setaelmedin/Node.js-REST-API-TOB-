@@ -56,7 +56,7 @@ app.get("/user/:id", async (req, res) => {
   if (!(firstRequest && firstRequest.address && firstRequest.address.geo)) return res.status(400).json({ message: 'No user found' })
 
   const { lat, lng } = firstRequest.address.geo
-  const appWeatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${APPID}`
+  const appWeatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=68866f61fcb7f456289e0d4997bee6d0`
   secondRequest = await axios.get(appWeatherURL)
     .then((response) => {
       return res.status(200).json({ user: firstRequest, weatherData: response.data })
