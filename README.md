@@ -17,8 +17,3 @@
 # To Docker-ize this API
 	docker-compose -f "docker-compose.yml" up -d --build
 	
-	or
-	
-	docker build -t {username}/{imageName} .
-	docker run -p 80:80 {username}/{imageName}
-	
